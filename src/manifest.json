@@ -1,0 +1,51 @@
+{
+    "name": "__MSG_appName__",
+    "version": "1.0.0",
+    "description": "__MSG_appDescription__",
+    "manifest_version": 3,
+    "default_locale": "en",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [ "<all_urls>" ],
+            "js": [ "content.js" ],
+            "css": [ "styles.css" ],
+            "run_at": "document_start"
+        }
+    ],
+    "permissions": [
+        "scripting",
+        "storage", 
+        "unlimitedStorage", 
+        "tabs",
+        "activeTab",
+        "webRequest",
+        "contextMenus"
+    ],
+    "web_accessible_resources":  [
+        {
+          "resources": [ "injected.js" ],
+          "matches": [ "<all_urls>" ]
+        },
+        {
+            "resources": [ "popup.js" ],
+            "matches": [ "<all_urls>" ]
+          }
+    ],
+    "externally_connectable": {
+        "ids": [ "*" ],
+        "matches": [ "<all_urls>" ],
+        "accepts_tls_channel_id": true
+    },
+    "host_permissions": ["<all_urls>"],
+    "icons": {
+        "16": "cheems.png",
+        "48": "cheems.png",
+        "128": "cheems.png"
+    },
+    "action": {
+        "default_title": "Chrome Extension Heorun | Author by heo001997@gmail.com, enjoy! :)"
+    }
+}

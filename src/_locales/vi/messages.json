@@ -1,0 +1,11 @@
+{
+    "appName": {
+        "message": "Chrome Extension Heorun"
+    },
+    "appDescription": {
+        "message": "This is my very first cool extension\nChrome Extension Heorun | Author by heo001997@gmail.com, enjoy! :)"
+    },
+    "enableDarkModeText": {
+        "message": "Dark Mode"
+    }
+}
