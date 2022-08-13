@@ -3,9 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "watch": {
+    "build": {
+      "patterns": ["src"],
+      "extensions": "ts,json,html,png,css",
+      "runOnChangeOnly": false
+    }
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode=production"
+    "build": "webpack --mode=production",
+    "watch": "npm-watch"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +23,7 @@
     "idb": "^6.1.2",
     "javascript-obfuscator": "^2.19.0",
     "jquery": "^3.6.0",
+    "npm-watch": "^0.11.0",
     "types": "^0.1.1",
     "xmlhttprequest": "^1.8.0"
   },
