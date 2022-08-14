@@ -1,28 +1,33 @@
 <html>
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
 <body>
     <h1 class="popup-heading">Supported Url</h1>
-    <button id="addSourceUrl">Add Source Url</button>
+    <button id="addWhiteList">Add</button>
+    <button id="saveWhiteList">Save</button>
     <table id="whiteList">
         <tr>
-            <th>Index</th>
-            <th>Source Url</th>
             <th>Function Name</th>
-            <th>API Watch</th>
-            <th>API Watch - Document Watch</th>
+            <th>Function Title</th>
+            <th>Function Description</th>
+            <th>Source Url Patterns</th>
+            <th>API Watch Patterns</th>
+            <th>Document Watch Patterns</th>
             <th>Script Run</th>
         </tr>
         <tr>
-            <td><div contenteditable>matchbox</div></td>
-            <td><div contenteditable>ja/location_apply_orders</div></td>
-            <td><div contenteditable>ja/location_apply_orders 1</div></td>
-            <td><div contenteditable>ja/location_apply_orders 2</div></td>
-            <td><div contenteditable>ja/location_apply_orders 3</div></td>
-            <td><div contenteditable>ja/location_apply_orders 4</div></td>
+            <td><div contenteditable>getOrderId</div></td>
+            <td><div contenteditable>Get Order Id</div></td>
+            <td><div contenteditable>Get orderId from url and copy to clipboard</div></td>
+            <td><div contenteditable>owner|matchbox|orders</div></td>
+            <td><div contenteditable></div></td>
+            <td><div contenteditable></div></td>
+            <td><div contenteditable></div></td>
         </tr>
     </table>
 </body>
 <script type="text/javascript" src="popup.js"></script>
+<script type="text/javascript" src="scripts/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.tabletojson.min.js"></script>
 </html>

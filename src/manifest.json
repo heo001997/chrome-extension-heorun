@@ -17,8 +17,8 @@
     ],
     "permissions": [
         "scripting",
-        "storage", 
-        "unlimitedStorage", 
+        "storage",
+        "unlimitedStorage",
         "tabs",
         "activeTab",
         "webRequest",
@@ -32,7 +32,11 @@
         {
             "resources": [ "popup.js" ],
             "matches": [ "<all_urls>" ]
-          }
+        },
+        {
+            "resources": [ "scripts/jquery-3.6.0.min.js", "scripts/jquery.tabletojson.min.js" ],
+            "matches": [ "<all_urls>" ]
+        }
     ],
     "externally_connectable": {
         "ids": [ "*" ],

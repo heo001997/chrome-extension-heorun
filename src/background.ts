@@ -10,6 +10,13 @@ chrome.action.onClicked.addListener(function(tab) {
 });
 
 chrome.contextMenus.create({
+    id: "heorun",
+    title: "Heorun Tools",
+    contexts: [ "all" ],
+});
+
+chrome.contextMenus.create({
+    parentId: "heorun",
     id: "protocol-swapper",
     title: "https <-> http",
     contexts: [ "all" ],

@@ -1,15 +1,22 @@
-const addSourceUrl = document.getElementById("addSourceUrl")
-if (addSourceUrl != null){
-    addSourceUrl.addEventListener("click", addSourceUrlExecute);
-}
+const addWhiteList = document.getElementById("addWhiteList")
+if (addWhiteList != null) addWhiteList.addEventListener("click", addWhiteListExecute);
 
-function addSourceUrlExecute() {
+const saveWhiteList = document.getElementById("saveWhiteList")
+if (saveWhiteList != null) saveWhiteList.addEventListener("click", saveWhiteListExecute);
+
+function addWhiteListExecute() {
     var table = document.getElementById("whiteList") as HTMLTableElement;
     var row = table.insertRow();
-    var cell1 = row.insertCell();
-    var cell2 = row.insertCell();
-    cell1.setAttribute('contentEditable', 'true');
-    cell2.setAttribute('contentEditable', 'true');
+    var col_length = $("#whiteList th").length;
+    for(var i=0; i<col_length; i++){
+        var cell = row.insertCell();
+        cell.setAttribute('contentEditable', 'true');
+    }
+}
+
+function saveWhiteListExecute() {
+    var whiteListJson = ($('#whiteList') as any).tableToJSON();
+    alert(JSON.stringify(whiteListJson[0]))
 }
 
 function setPostLinksToStorage(postLinks) {
