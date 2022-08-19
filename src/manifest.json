@@ -38,11 +38,6 @@
             "matches": [ "<all_urls>" ]
         }
     ],
-    "externally_connectable": {
-        "ids": [ "*" ],
-        "matches": [ "<all_urls>" ],
-        "accepts_tls_channel_id": true
-    },
     "host_permissions": ["<all_urls>"],
     "icons": {
         "16": "cheems.png",
@@ -50,6 +45,6 @@
         "128": "cheems.png"
     },
     "action": {
-        "default_title": "Chrome Extension Heorun | Author by heo001997@gmail.com, enjoy! :)"
+        "default_title": "Heorun Utilities | Author by heo001997@gmail.com, enjoy! :)"
     }
 }

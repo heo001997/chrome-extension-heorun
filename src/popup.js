@@ -1,3 +1,9 @@
+const unique = require("uniq");
+const _ = require("lodash");
+
+console.log("Ok popup.js worked");
+console.log(_.range(1,9));
+
 const addWhiteList = document.getElementById("addWhiteList")
 if (addWhiteList != null) addWhiteList.addEventListener("click", addWhiteListExecute);
 
@@ -5,7 +11,7 @@ const saveWhiteList = document.getElementById("saveWhiteList")
 if (saveWhiteList != null) saveWhiteList.addEventListener("click", saveWhiteListExecute);
 
 function addWhiteListExecute() {
-    var table = document.getElementById("whiteList") as HTMLTableElement;
+    var table = document.getElementById("whiteList");
     var row = table.insertRow();
     var col_length = $("#whiteList th").length;
     for(var i=0; i<col_length; i++){
@@ -15,7 +21,7 @@ function addWhiteListExecute() {
 }
 
 function saveWhiteListExecute() {
-    var whiteListJson = ($('#whiteList') as any).tableToJSON();
+    var whiteListJson = $('#whiteList').tableToJSON();
     alert(JSON.stringify(whiteListJson[0]))
 }
 
@@ -67,7 +73,7 @@ async function getLikers() {
         return false;
     }
 
-    const postLinksTextArea = document.getElementById("postLinksTextArea") as HTMLTextAreaElement;
+    const postLinksTextArea = document.getElementById("postLinksTextArea");
     const postLinksValue = postLinksTextArea.value;
 
     if (postLinksValue !== ""){
